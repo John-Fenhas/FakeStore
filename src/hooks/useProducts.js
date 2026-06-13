@@ -1,8 +1,8 @@
 import { useMemo, useState, useEffect } from "react";
-import { fetchProducts } from "../utiles/api";
+import { fetchProducts } from "../utils/api";
 
 const useProducts = () => {
-  const [products, setProducts] = useState();
+  const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
 

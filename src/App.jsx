@@ -53,12 +53,13 @@ function App() {
           productCount={productCount}
           handleSearch={handleSearch}
           handleCategoryChange={handleCategoryChange}
+          isLoading={isLoading}
         />
         <ProductGrid
-          productCount={productCount}
           products={filteredProducts}
           isLoading={isLoading}
           isEmpty={isEmpty}
+          error={error}
         />
       </div>
     </>

@@ -1,8 +1,10 @@
 import EmptyState from "./EmptyState";
+import ErrorState from "./ErrorState";
 import ProductCard from "./ProductCard";
 import ProductCardSkeleton from "./ProductCardSkeleton";
 
 export default function ProductGrid({
+  error,
   isEmpty,
   productCount,
   products,
@@ -10,6 +12,9 @@ export default function ProductGrid({
 }) {
   if (isEmpty) {
     return <EmptyState />;
+  }
+  if (error) {
+    return <ErrorState />;
   }
   return (
     <div className="py-14 md:py-20">
