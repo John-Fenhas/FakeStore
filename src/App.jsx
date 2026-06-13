@@ -33,6 +33,8 @@ function App() {
 
   const productCount = filteredProducts?.length;
 
+  const isEmpty = !isLoading && !error && filteredProducts.length === 0;
+
   function handleCategoryChange(category) {
     setCategoryFilter(category.toLowerCase());
   }
@@ -52,7 +54,12 @@ function App() {
           handleSearch={handleSearch}
           handleCategoryChange={handleCategoryChange}
         />
-        <ProductGrid products={filteredProducts} isLoading={isLoading} />
+        <ProductGrid
+          productCount={productCount}
+          products={filteredProducts}
+          isLoading={isLoading}
+          isEmpty={isEmpty}
+        />
       </div>
     </>
   );
