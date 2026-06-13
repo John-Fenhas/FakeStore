@@ -13,7 +13,7 @@ function App() {
 
   const filteredProducts = useMemo(() => {
     if (!products) {
-      return;
+      return [];
     }
 
     let result = [...products];
