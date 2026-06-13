@@ -1,15 +1,15 @@
 import { useRef, useState, useEffect } from "react";
 
-export default function CategoryDropdown() {
+export default function CategoryDropdown({ handleCategoryChange }) {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
 
   const categories = [
     "All",
-    "men's clothing",
-    "jewelery",
-    "electronics",
-    "women's clothing",
+    "Men's Clothing",
+    "Jewelery",
+    "Electronics",
+    "Women's Clothing",
   ];
 
   const [currentValue, setCurrentValue] = useState("All");
@@ -66,6 +66,8 @@ export default function CategoryDropdown() {
               onClick={() => {
                 setOpen(false);
                 setCurrentValue(category);
+                handleCategoryChange(category);
+                console.log(category);
               }}
               className="flex items-center px-4 py-2 cursor-pointer hover:bg-white/5 transition"
             >

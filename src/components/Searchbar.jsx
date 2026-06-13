@@ -1,4 +1,4 @@
-export default function searchbar() {
+export default function searchbar({ handleSearch }) {
   return (
     <div className="flex items-center gap-1.5 border border-slate-200 rounded-lg p-2">
       <svg
@@ -29,6 +29,7 @@ export default function searchbar() {
         className=" border-none outline-none text-sm"
         type="text"
         placeholder="What are you looking for?"
+        onChange={(e) => handleSearch(e)}
       />
     </div>
   );
