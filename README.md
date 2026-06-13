@@ -5,7 +5,7 @@ A single-page app built with React that fetches and displays products from the [
 
 ## Live Demo
 
-> Add your deployment URL here.
+> [Live on Vercel.](https://fake-store-three-zeta.vercel.app/)
 
 ---
 
