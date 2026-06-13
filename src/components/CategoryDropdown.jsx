@@ -67,7 +67,6 @@ export default function CategoryDropdown({ handleCategoryChange }) {
                 setOpen(false);
                 setCurrentValue(category);
                 handleCategoryChange(category);
-                console.log(category);
               }}
               className="flex items-center px-4 py-2 cursor-pointer hover:bg-white/5 transition"
             >

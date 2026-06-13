@@ -31,6 +31,8 @@ function App() {
     return result;
   }, [products, categoryFilter, searchQuery]);
 
+  const productCount = filteredProducts?.length;
+
   function handleCategoryChange(category) {
     setCategoryFilter(category.toLowerCase());
   }
@@ -41,13 +43,12 @@ function App() {
     searchTimer.current = setTimeout(() => setSearchQuery(value), 200);
   }
 
-  console.log(filteredProducts);
-
   return (
     <>
       <Navbar />
       <div className="max-w-10/12 mx-auto">
         <CategoryFilter
+          productCount={productCount}
           handleSearch={handleSearch}
           handleCategoryChange={handleCategoryChange}
         />
